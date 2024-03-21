@@ -1,5 +1,5 @@
 // Bcounter implements a (concrete) type whose method counts bytes before
-// discarding them. Since it satisfies the io.Writer interfaces (an abstract type),
+// discarding them. Since it satisfies the io.Writer interface (an abstract type),
 // we can pass it to fmt.Fprint.
 package main
 
