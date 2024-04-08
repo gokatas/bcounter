@@ -14,10 +14,8 @@ func (b *bcounter) Write(p []byte) (int, error) {
 }
 
 func main() {
-	var b bcounter           // declare variable of type bcounter
-	b.Write([]byte("hello")) // b == 5
-	b = 0                    // reset the byte counter
-	data := "形"
-	fmt.Fprint(&b, data)
-	fmt.Printf("%s is %d bytes: %v\n", data, b, []byte(data))
+	var b bcounter
+	fmt.Fprintf(&b, "hello")
+	b.Write([]byte("world"))
+	fmt.Println(b)
 }
