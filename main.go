@@ -15,7 +15,7 @@ func (b *bcounter) Write(p []byte) (int, error) {
 
 func main() {
 	var b bcounter
-	fmt.Fprintf(&b, "hello")
+	fmt.Fprint(&b, "hello")
 	b.Write([]byte("world"))
 	fmt.Println(b)
 }
