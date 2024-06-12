@@ -1,4 +1,4 @@
-// Bwriter implements a (concrete) type whose method counts bytes
+// Bcounter implements a (concrete) type whose method counts bytes
 // before discarding them. Since it satisfies the io.Writer interface
 // (an abstract type), we can pass it to fmt.Fprint. Adapted from
 // https://github.com/adonovan/gopl.io/tree/master/ch7/bytecounter.
