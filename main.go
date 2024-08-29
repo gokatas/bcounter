@@ -17,5 +17,5 @@ func main() {
 	var b bcounter
 	fmt.Fprint(&b, "hello")
 	b.Write([]byte("world"))
-	fmt.Println(b)
+	fmt.Printf("count: %d bytes\n", b)
 }
