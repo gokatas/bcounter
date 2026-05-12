@@ -8,14 +8,15 @@ import "fmt"
 
 type bcounter int
 
-func (b *bcounter) Write(p []byte) (int, error) {
-	*b += bcounter(len(p)) // must explicitly convert int to bcounter
+func (c *bcounter) Write(p []byte) (int, error) {
+	*c += bcounter(len(p)) // must explicitly convert int to bcounter
 	return len(p), nil
 }
 
 func main() {
-	var b bcounter
-	fmt.Fprint(&b, "hello")
-	b.Write([]byte("world"))
-	fmt.Printf("count: %d bytes\n", b)
+	var c bcounter
+	fmt.Fprint(&c, "hello")
+	c = 0 // reset the counter
+	c.Write([]byte("world"))
+	fmt.Printf("count: %d bytes\n", c)
 }
